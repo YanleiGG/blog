@@ -1,8 +1,16 @@
 import React from 'react'
-import { Row, Col, Tabs, Menu } from 'antd';
+import { Row, Col, Menu, Avatar, Dropdown } from 'antd';
 
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+const userMenu = (
+    <Menu>
+      <Menu.Item key="0">
+        <a target="_blank" rel="noopener noreferrer">1st menu item</a>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <a target="_blank" rel="noopener noreferrer">2nd menu item</a>
+      </Menu.Item>
+    </Menu>
+)
 
 export default class Home extends React.Component {
   render () {
@@ -19,7 +27,13 @@ export default class Home extends React.Component {
             </Menu.Item>
           </Menu> 
         </Col>
-        {/* <Col span={2}>11</Col> */}
+        <Col span={2}>
+          <Dropdown overlay={userMenu}>
+            <Avatar style={ style.avatar } size="large">
+              测试
+            </Avatar>
+          </Dropdown>    
+        </Col>
       </Row>
     )
   }
@@ -48,5 +62,11 @@ const style = {
     height: "100%",
     fontSize: "15px",
     paddingTop: "15px",
+  },
+  avatar: { 
+    backgroundColor: "green", 
+    verticalAlign: 'middle',
+    textAlign: 'center',
+    marginTop: '15px',
   }
 }
