@@ -1,13 +1,18 @@
 import React from 'react'
-import { Row, Col, Menu, Avatar, Dropdown } from 'antd';
+import { Row, Col, Menu, Dropdown } from 'antd';
+import Avatar from '@material-ui/core/Avatar';
+
 
 const userMenu = (
     <Menu>
       <Menu.Item key="0">
-        <a target="_blank" rel="noopener noreferrer">1st menu item</a>
+        写文章
       </Menu.Item>
       <Menu.Item key="1">
-        <a target="_blank" rel="noopener noreferrer">2nd menu item</a>
+        消息
+      </Menu.Item>
+      <Menu.Item key="2">
+        注销
       </Menu.Item>
     </Menu>
 )
@@ -22,15 +27,15 @@ export default class Header extends React.Component {
         <Col span={6}></Col>
         <Col style={ style.menuContainer } span={12}>
           <Menu style={ style.menu } mode="horizontal">
-            <Menu.Item key="app" style={ style.menuItem }>
+            {/* <Menu.Item key="app" style={ style.menuItem }>
               首页
-            </Menu.Item>
+            </Menu.Item> */}
           </Menu> 
         </Col>
         <Col span={2}>
           <Dropdown overlay={userMenu}>
             <Avatar style={ style.avatar } size="large">
-              测试
+              A
             </Avatar>
           </Dropdown>    
         </Col>
@@ -42,7 +47,7 @@ export default class Header extends React.Component {
 const style = {
   header: { 
     height: '70px', 
-    boxShadow: '0 0 15px 0 #e8e8e8',
+    boxShadow: '0 0 30px 0 black',
     backgroundColor: 'white'
   },
   logoContainer: { 

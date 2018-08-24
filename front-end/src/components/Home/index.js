@@ -1,7 +1,8 @@
 import React from 'react'
-import { Layout } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import HeaderNav from './HeaderNav'
 import ArticleCard from './ArticleCard'
+import SiderRight from './SiderRight'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -10,13 +11,14 @@ export default class Home extends React.Component {
     return (
       <Layout>
         <HeaderNav/>
-        <Layout>
-          <Content>
+        <Row>
+          <Col span={16}>
             <ArticleCard/>
-          </Content>
-          {/* <Sider>Sider</Sider> */}
-        </Layout>
-        {/* <Footer>Footer</Footer> */}
+          </Col>
+          <Col span={8}>
+            <SiderRight/>
+          </Col>
+        </Row>
       </Layout>
     )
   }
