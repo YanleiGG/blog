@@ -22,7 +22,7 @@ export default class Header extends React.Component {
     return (
       <Row style={ style.header }>
         <Col span={4} style={style.logoContainer}>
-          <img style={ style.logo } src={ require("../assets/blog-logo.png") }></img>
+          <img style={ style.logo } src={ require("../../assets/blog-logo.png") }></img>
         </Col>
         <Col span={6}></Col>
         <Col style={ style.menuContainer } span={12}>
@@ -47,7 +47,7 @@ export default class Header extends React.Component {
 const style = {
   header: { 
     height: '70px', 
-    boxShadow: '0 0 30px 0 black',
+    boxShadow: '0 0 1px 0 black',
     backgroundColor: 'white'
   },
   logoContainer: { 
