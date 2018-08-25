@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout, Row, Col } from 'antd';
-import HeaderNav from './HeaderNav'
+import HeaderNav from '../public/HeaderNav'
 import ArticleCard from './ArticleCard'
 import SiderRight from './SiderRight'
 import { observer, inject } from 'mobx-react';

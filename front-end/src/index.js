@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import "antd/dist/antd.css";
-import authStore from './store/authStore'
 import { Provider } from 'mobx-react';
 
-const stores = { 
-  authStore
+import 'react-quill/dist/quill.snow.css';
+import "antd/dist/antd.css";
+
+import authStore from './store/authStore'
+import writeArticleStore from './store/writeArticleStore'
+
+const stores = {
+  authStore,
+  writeArticleStore
 }
 
 ReactDOM.render(
