@@ -1,10 +1,10 @@
 import { observable } from "mobx";
 
-class Store {
+class AuthStore {
   @observable isLogin = false
 }
 
-let store = new Store()
+let store = new AuthStore()
 
 export default store
 

@@ -2,6 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import "antd/dist/antd.css";
-import store from './store'
+import authStore from './store/authStore'
+import { Provider } from 'mobx-react';
 
-ReactDOM.render(<App store = { store } />, document.getElementById('root'));
+const stores = { 
+  authStore
+}
+
+ReactDOM.render(
+  <Provider {...stores}>
+    <App />
+  </Provider>
+, document.getElementById('root'));
+
