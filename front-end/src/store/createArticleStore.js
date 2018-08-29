@@ -1,6 +1,6 @@
 import { observable, action } from "mobx";
 
-class writeArticleStore {
+class createArticleStore {
   @observable article = {
     title: '',
     content: ''
@@ -15,7 +15,7 @@ class writeArticleStore {
   }
 }
 
-let store = new writeArticleStore()
+let store = new createArticleStore()
 
 export default store
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Menu, Dropdown } from 'antd';
 import Avatar from '@material-ui/core/Avatar';
-
+import { Link } from "react-router-dom";
 
 const userMenu = (
     <Menu>
@@ -22,7 +22,9 @@ export default class Header extends React.Component {
     return (
       <Row style={ style.header }>
         <Col span={4} style={style.logoContainer}>
-          <img style={ style.logo } src={ require("../../assets/blog-logo.png") }></img>
+          <Link to='/home'>
+            <img style={ style.logo } src={ require("../../assets/blog-logo.png") }></img>
+          </Link>
         </Col>
         <Col span={6}></Col>
         <Col style={ style.menuContainer } span={12}>
@@ -70,7 +72,7 @@ const style = {
     paddingTop: "15px",
   },
   avatar: { 
-    backgroundColor: "green", 
+    backgroundColor: "#f44336", 
     verticalAlign: 'middle',
     textAlign: 'center',
     marginTop: '15px',

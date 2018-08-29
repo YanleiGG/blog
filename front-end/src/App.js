@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Home from './components/Home'
-import WriteArticle from './components/WriteArticle'
 import { observer, inject } from 'mobx-react';
+
+import Home from './components/Home'
+import CreateArticle from './components/CreateArticle'
+import Login from './components/Login'
 
 @inject('authStore')
 @observer
@@ -12,7 +14,8 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path='/home' component={Home} exact></Route>
-          <Route path='/write' component={WriteArticle}></Route>
+          <Route path='/create-article' component={CreateArticle}></Route>
+          <Route path='/login' component={Login}></Route>
         </Switch>
       </BrowserRouter>
     );

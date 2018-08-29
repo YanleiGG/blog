@@ -4,12 +4,12 @@ import './editor.css'
 import { observer, inject } from 'mobx-react';
 import { Input } from 'antd';
 
-@inject('writeArticleStore')
+@inject('createArticleStore')
 @observer
 class Editor extends React.Component {
   
   render () {
-    let { article, handleEditorChange, handleTitleChange } = this.props.writeArticleStore
+    let { article, handleEditorChange, handleTitleChange } = this.props.createArticleStore
     return (
       <div>
         <Input
